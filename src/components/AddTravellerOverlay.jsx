@@ -103,9 +103,12 @@ export default function AddTravellerOverlay({ onClose, onAdd }) {
                             type="text"
                             placeholder="Cellulare"
                             value={newTraveller.cellulare}
-                            onChange={(e) =>
-                                setNewTraveller({ ...newTraveller, cellulare: e.target.value })
-                            }
+                            onChange={(e) => {
+                                const value = e.target.value;
+                                if (/^\d*$/.test(value)) {
+                                    setNewTraveller({ ...newTraveller, cellulare: value });
+                                }
+                            }}
                         />
                         <input
                             type="text"
