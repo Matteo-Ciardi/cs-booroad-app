@@ -18,10 +18,7 @@
     box-shadow: var(--shadow);
     padding: 8px;
     transition: transform .08s ease;
-}
-
-.travel-card:active {
-    transform: scale(.99);
+    box-shadow: 0 2 20px 2px black;
 }
 
 .travel-card img {
